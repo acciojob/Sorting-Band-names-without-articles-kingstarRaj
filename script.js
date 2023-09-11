@@ -25,8 +25,20 @@ for (let i = 0; i < touristSpots.length; i++) {
 
 arr.sort();
 
+
+
 for (let i = 0; i < arr.length; i++) {
   touristSpots[i] = mapp[arr[i]];
+}
+
+// Create a list and populate it with the sorted band names
+let ul = document.createElement('ul');
+ul.id = 'band';
+
+for (let i = 0; i < arr.length; i++) {
+  let li = document.createElement('li');
+  li.textContent = arr[i];
+  ul.appendChild(li);
 }
 
 console.log(touristSpots);
